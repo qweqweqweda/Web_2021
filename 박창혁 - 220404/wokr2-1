@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="work2-2.jsp">
+   <table>
+       <tr>
+        <td>글쓰기</td>
+       <td>
+     <textarea class="form-control" rows="4" id="Post" name="Post"></textarea>
+           </td>
+       </tr>
+   </table>
+  <input type="submit" value="작성 완료">
+</form>
+
+</body>
+</html>
