@@ -16,7 +16,7 @@ String pwd = request.getParameter("pwd");
 	Connection con = DriverManager.getConnection(url, user, password);
 	
 	//3. SQL문
-	String sql = "insert into login(id,pdw) values(?, ?)";
+	String sql = "insert into login(id,pwd) values(?, ?)";
 	
 	//4. SQL 실행
 	//Statement stmt = con.createStatement();
@@ -30,7 +30,7 @@ String pwd = request.getParameter("pwd");
 	pstmt.close();
 	con.close();
 	
-	response.sendRedirect("dbcon-login.jsp");
+	//response.sendRedirect("dbcon-login.jsp");
 %>
 <!DOCTYPE html>
 <html>
