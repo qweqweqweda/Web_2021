@@ -10,7 +10,7 @@
 		//1. JDBC드라이버를 로드
 		Class.forName("org.mariadb.jdbc.Driver");
 		//2. 연결통로(connection) 얻기
-		String url = "jdbc:mariadb://localhost:3306/parkCHdb";
+		String url = "jdbc:mariadb://localhost:3306/parkchdb";
 		String user = "ParkCH";
 		String pwd = "1111";
 		
