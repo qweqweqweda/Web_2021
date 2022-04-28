@@ -10,11 +10,13 @@
 	//클라이언트에서 전달된 데이터
 	String bNo = request.getParameter("bNo");
 	
-	//DBCP로 변경
-	Context initCtx = new InitialContext();
-	Context envCtx = (Context)initCtx.lookup("java:comp/env");
-	DataSource ds = (DataSource)envCtx.lookup("jdbc/jylee");
-	Connection con = ds.getConnection();
+	 //DBCP로 변경
+	Context initCtx = new InitialContext(); //JNDI를 사용하기 위한 객체 생성
+	Context envCtx = (Context)initCtx.lookup("java:comp/env"); //등록된 JNDI 서비스로부터 자원을 검색
+	DataSource ds = (DataSource)envCtx.lookup("jdbc/ParkCH"); //java:comp/env 영역에서 “jdbc/ParkCH”으로 설정된 이름의 DataSource 객체 획득
+	Connection con = ds.getConnection(); //ds.getConnection()메소드를 사용해서 커넥션 풀로부터 커넥션 객체를 할당 받음
+	
+
 	
 	//3. sql문
 	String sql = "select * from board where bNo=?";
